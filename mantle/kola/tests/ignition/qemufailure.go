@@ -73,7 +73,7 @@ func ignitionFailure(c cluster.TestCluster) error {
 	builder.AddPrimaryDisk(&platform.Disk{
 		BackingFile: kola.QEMUOptions.DiskImage,
 	})
-	builder.Memory = 1024
+	builder.Memory = 2048
 	inst, err := builder.Exec()
 	if err != nil {
 		return err
