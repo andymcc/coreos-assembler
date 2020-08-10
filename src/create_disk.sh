@@ -429,6 +429,8 @@ fstrim -a -v
 # Ensure the filesystem journal is flushed
 mount -o remount,ro $rootfs
 xfs_freeze -f $rootfs
+lsattr -d $rootfs
+chattr +i $rootfs
 umount -R $rootfs
 
 rmdir $rootfs
